@@ -17,7 +17,7 @@ void Theater::AddMovie(Movie& Movie){
     movies[Movie.GetShowTime()] = Movie;
 }
 string Theater::GetMovieForHour(int hour){
-    if (hour == 18){
+    if (movies[hour].GetTitle() == "Napolean Dynamite"){
         return movies[hour+1].GetTitle();
     }
     if (hour>=0 && hour <=24){
